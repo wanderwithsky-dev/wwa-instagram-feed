@@ -1,16 +1,21 @@
 // Reads the @wanderwithacademy feed from Behold, keeps only what the website
-// shows, and writes feed.json. Run every hour by .github/workflows/refresh.yml.
+// shows, and writes feed.json. Run by .github/workflows/refresh.yml.
 //
 // Behold's free plan allows 1,200 feed requests a month and pauses the account
 // once that is exceeded, so this job is the ONLY thing that ever calls Behold:
-// one request per run, no retries. A failed or odd-looking response never
-// replaces feed.json, so the website keeps showing the last good copy.
+// at most one request per run, no retries, and on a schedule only the first
+// run of each clock hour calls it (see LAST_READ). A failed or odd-looking
+// response never replaces feed.json, so the website keeps showing the last
+// good copy.
 //
 // For a local dry run without calling Behold: BEHOLD_FEED_FILE=some.json node scripts/refresh.mjs
 
-import { readFile, writeFile } from 'node:fs/promises'
+import { appendFile, readFile, writeFile } from 'node:fs/promises'
 
 const FILE = new URL('../feed.json', import.meta.url)
+// Time of the last Behold call. The workflow carries it from run to run in the
+// Actions cache; it is never committed.
+const LAST_READ = new URL('../.last-read', import.meta.url)
 const MAX_POSTS = 6
 const SIZES = ['small', 'medium', 'large']
 
@@ -75,6 +80,22 @@ async function readBehold() {
 }
 
 const now = new Date()
+
+// GitHub skips many scheduled runs, so the workflow offers four slots an hour.
+// A scheduled run reads Behold only if nothing has read it yet this clock
+// hour: at most 24 reads a day. A run started by hand, or by a change to this
+// job, always reads.
+if (process.env.GITHUB_EVENT_NAME === 'schedule') {
+  const last = new Date((await readFile(LAST_READ, 'utf8').catch(() => '')).trim())
+  if (!Number.isNaN(last.getTime()) && last.toISOString().slice(0, 13) === now.toISOString().slice(0, 13)) {
+    console.log(`Behold was already read this hour (${last.toISOString()}). Skipping.`)
+    process.exit(0)
+  }
+}
+// From here on this run counts as a Behold view, whether or not the read works.
+await writeFile(LAST_READ, now.toISOString() + '\n')
+if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, 'read=true\n')
+
 const previous = await readFile(FILE, 'utf8')
   .then(JSON.parse)
   .catch(() => null)

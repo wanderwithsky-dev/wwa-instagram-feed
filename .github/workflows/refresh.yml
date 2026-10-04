@@ -1,12 +1,20 @@
 name: Refresh Instagram feed
 
-# Every hour at 23 minutes past (GitHub is busiest on the hour), plus a
-# "Run workflow" button for a manual check. Each run makes exactly one call
-# to Behold: about 744 a month, under the free plan's 1,200.
+# GitHub skips many scheduled runs when it is busy (on 3–4 Oct 2026 only about
+# one hourly slot in three ran), so the job gets four slots an hour, away from
+# the top of the hour. The script reads Behold only on the first run of each
+# clock hour, so the schedule never makes more than 24 calls a day (744 in a
+# month, under the free plan's 1,200). "Run workflow", and any change to this
+# job, always reads Behold once.
 on:
   schedule:
-    - cron: '23 * * * *'
+    - cron: '8,23,38,53 * * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/refresh.yml
+      - scripts/**
 
 permissions:
   contents: write
@@ -22,10 +30,28 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      # .last-read holds the time of the last Behold call. It travels from run
+      # to run in the Actions cache and is never committed.
+      - name: Recall the last Behold read
+        uses: actions/cache/restore@v6
+        with:
+          path: .last-read
+          key: last-read-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: last-read-
+
       - name: Read Behold and update feed.json
+        id: refresh
         env:
           BEHOLD_FEED_URL: ${{ secrets.BEHOLD_FEED_URL }}
         run: node scripts/refresh.mjs
+
+      # also after a failed read: that call still counted as a Behold view
+      - name: Remember this Behold read
+        if: ${{ !cancelled() && steps.refresh.outputs.read == 'true' }}
+        uses: actions/cache/save@v6
+        with:
+          path: .last-read
+          key: last-read-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Save the update
         run: |
