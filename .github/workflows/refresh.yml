@@ -1,11 +1,13 @@
 name: Refresh Instagram feed
 
-# GitHub skips many scheduled runs when it is busy (on 3–4 Oct 2026 only about
-# one hourly slot in three ran), so the job gets four slots an hour, away from
-# the top of the hour. The script reads Behold only on the first run of each
-# clock hour, so the schedule never makes more than 24 calls a day (744 in a
-# month, under the free plan's 1,200). "Run workflow", and any change to this
-# job, always reads Behold once.
+# GitHub starts scheduled runs late or not at all when it is busy (in early Oct
+# 2026 it often went 7 hours without one), so a scheduled run does not just
+# check once and leave: it stays for about five hours and checks Behold at five
+# past every hour. GitHub then only needs to start the job every few hours,
+# which it does manage. The script still reads Behold at most once per clock
+# hour, so this never makes more than 24 calls a day (744 in a month, under the
+# free plan's 1,200). "Run workflow", and any change to this job, check once
+# straight away and finish.
 on:
   schedule:
     - cron: '8,23,38,53 * * * *'
@@ -19,14 +21,16 @@ on:
 permissions:
   contents: write
 
+# Scheduled runs queue behind the one that is running (one waits, newer ones
+# replace it), so they hand over one to the next. A manual run never waits.
 concurrency:
-  group: refresh-feed
+  group: ${{ github.event_name == 'schedule' && 'refresh-feed' || format('refresh-feed-{0}', github.run_id) }}
   cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 340
     steps:
       - uses: actions/checkout@v5
 
@@ -39,28 +43,41 @@ jobs:
           key: last-read-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: last-read-
 
-      - name: Read Behold and update feed.json
+      - name: Read Behold every hour and save feed.json
         id: refresh
         env:
           BEHOLD_FEED_URL: ${{ secrets.BEHOLD_FEED_URL }}
-        run: node scripts/refresh.mjs
+          EVENT: ${{ github.event_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          stop=$(( $(date +%s) + 5 * 3600 + 15 * 60 ))
+          alert=0
+          while :; do
+            node scripts/refresh.mjs || alert=1
+            if ! git diff --quiet -- feed.json; then
+              git add feed.json
+              git commit --quiet -m "Update Instagram feed"
+            fi
+            # push anything not yet on GitHub (a failed push is retried next hour)
+            if [ -n "$(git log origin/main..HEAD --oneline)" ]; then
+              git pull --rebase --quiet origin main && git push --quiet origin HEAD:main \
+                || echo "::warning::Could not save this update; trying again next hour."
+            fi
+            # a run started by hand or by a change to the job checks once
+            [ "$EVENT" = schedule ] || break
+            now=$(date +%s)
+            next=$(( (now / 3600 + 1) * 3600 + 300 ))
+            [ "$next" -lt "$stop" ] || break
+            echo "Next check at $(date -u -d "@$next" +%H:%M) UTC."
+            sleep $(( next - now ))
+          done
+          exit $alert
 
       # also after a failed read: that call still counted as a Behold view
-      - name: Remember this Behold read
+      - name: Remember the last Behold read
         if: ${{ !cancelled() && steps.refresh.outputs.read == 'true' }}
         uses: actions/cache/save@v6
         with:
           path: .last-read
           key: last-read-${{ github.run_id }}-${{ github.run_attempt }}
-
-      - name: Save the update
-        run: |
-          if git diff --quiet -- feed.json; then
-            echo "Nothing to save."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add feed.json
-          git commit -m "Update Instagram feed"
-          git push

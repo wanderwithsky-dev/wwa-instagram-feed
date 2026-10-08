@@ -6,10 +6,11 @@ the homepage of wanderwithacademy.com.
 
 - **Every hour** a GitHub Action ([refresh.yml](.github/workflows/refresh.yml))
   reads the feed from Behold and saves the posts to `feed.json`. It is the only
-  thing that ever calls Behold. GitHub skips many scheduled runs when it is
-  busy, so the job has four time slots an hour, but only the first run of each
-  hour calls Behold: at most 24 calls a day and 744 a month, under the free
-  plan's 1,200.
+  thing that ever calls Behold. GitHub often starts scheduled runs hours late,
+  so a scheduled run stays for about five hours and checks Behold at five past
+  every hour; GitHub then only needs to start the job every few hours. Behold
+  is never called more than once per clock hour: at most 24 calls a day and 744
+  a month, under the free plan's 1,200.
 - **Behold's free plan refreshes from Instagram once a day**, so a new post can
   take up to a day to reach the website.
 - **If Behold fails** or sends something unexpected, `feed.json` is left as it
