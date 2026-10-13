@@ -1,20 +1,34 @@
 {
   "username": "wanderwithacademy",
-  "checkedAt": "2026-10-12T00:05:00.032Z",
-  "changedAt": "2026-10-12T00:05:00.032Z",
+  "checkedAt": "2026-10-13T00:34:11.300Z",
+  "changedAt": "2026-10-13T00:34:11.300Z",
   "posts": [
+    {
+      "id": "18142586227592565",
+      "permalink": "https://www.instagram.com/reel/DeZP3gXTwHJ/",
+      "type": "reel",
+      "timestamp": "2026-10-12T12:37:22+0000",
+      "likes": 2775,
+      "comments": 79,
+      "color": "180,100,76",
+      "images": {
+        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODE0MjU4NjIyNzU5MjU2NSIsImgiOiJzdzFrNHkifQ.jpg?class=originalSmall",
+        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODE0MjU4NjIyNzU5MjU2NSIsImgiOiJzdzFrNHkifQ.jpg?class=originalMedium",
+        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODE0MjU4NjIyNzU5MjU2NSIsImgiOiJzdzFrNHkifQ.jpg?class=originalLarge"
+      }
+    },
     {
       "id": "18157682773502163",
       "permalink": "https://www.instagram.com/reel/DeRgt4YoCLf/",
       "type": "reel",
       "timestamp": "2026-10-09T12:31:08+0000",
-      "likes": 865,
-      "comments": 35,
+      "likes": 922,
+      "comments": 36,
       "color": "156,84,52",
       "images": {
-        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODE1NzY4Mjc3MzUwMjE2MyIsImgiOiI4MmNyeW4ifQ.jpg?class=originalSmall",
-        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODE1NzY4Mjc3MzUwMjE2MyIsImgiOiI4MmNyeW4ifQ.jpg?class=originalMedium",
-        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODE1NzY4Mjc3MzUwMjE2MyIsImgiOiI4MmNyeW4ifQ.jpg?class=originalLarge"
+        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODE1NzY4Mjc3MzUwMjE2MyIsImgiOiIxcHI4emdrIn0.jpg?class=originalSmall",
+        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODE1NzY4Mjc3MzUwMjE2MyIsImgiOiIxcHI4emdrIn0.jpg?class=originalMedium",
+        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODE1NzY4Mjc3MzUwMjE2MyIsImgiOiIxcHI4emdrIn0.jpg?class=originalLarge"
       }
     },
     {
@@ -22,13 +36,13 @@
       "permalink": "https://www.instagram.com/reel/DeMXP7vIOel/",
       "type": "reel",
       "timestamp": "2026-10-07T12:32:26+0000",
-      "likes": 1703,
+      "likes": 1741,
       "comments": 15,
       "color": "164,132,60",
       "images": {
-        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1ODIyMzg2NjI1NTAyMSIsImgiOiIxbTFtYmc1In0.jpg?class=originalSmall",
-        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1ODIyMzg2NjI1NTAyMSIsImgiOiIxbTFtYmc1In0.jpg?class=originalMedium",
-        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1ODIyMzg2NjI1NTAyMSIsImgiOiIxbTFtYmc1In0.jpg?class=originalLarge"
+        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1ODIyMzg2NjI1NTAyMSIsImgiOiIxdHo0MGMxIn0.jpg?class=originalSmall",
+        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1ODIyMzg2NjI1NTAyMSIsImgiOiIxdHo0MGMxIn0.jpg?class=originalMedium",
+        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1ODIyMzg2NjI1NTAyMSIsImgiOiIxdHo0MGMxIn0.jpg?class=originalLarge"
       }
     },
     {
@@ -36,13 +50,13 @@
       "permalink": "https://www.instagram.com/reel/DeCEB0mIHjz/",
       "type": "reel",
       "timestamp": "2026-10-03T12:31:53+0000",
-      "likes": 881,
+      "likes": 901,
       "comments": 103,
       "color": "164,84,236",
       "images": {
-        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzg3MTcyNTk0MzYzOTYwMSIsImgiOiJrbTBtdWoifQ.jpg?class=originalSmall",
-        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzg3MTcyNTk0MzYzOTYwMSIsImgiOiJrbTBtdWoifQ.jpg?class=originalMedium",
-        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzg3MTcyNTk0MzYzOTYwMSIsImgiOiJrbTBtdWoifQ.jpg?class=originalLarge"
+        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzg3MTcyNTk0MzYzOTYwMSIsImgiOiI2MDJkZHUifQ.jpg?class=originalSmall",
+        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzg3MTcyNTk0MzYzOTYwMSIsImgiOiI2MDJkZHUifQ.jpg?class=originalMedium",
+        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzg3MTcyNTk0MzYzOTYwMSIsImgiOiI2MDJkZHUifQ.jpg?class=originalLarge"
       }
     },
     {
@@ -50,13 +64,13 @@
       "permalink": "https://www.instagram.com/reel/Dd6Wns1zGJB/",
       "type": "reel",
       "timestamp": "2026-09-30T12:44:16+0000",
-      "likes": 3206,
+      "likes": 3255,
       "comments": 60,
       "color": "68,77,101",
       "images": {
-        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1NzA2NjM5NzIzMjgxNiIsImgiOiJwd3M2M2gifQ.jpg?class=originalSmall",
-        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1NzA2NjM5NzIzMjgxNiIsImgiOiJwd3M2M2gifQ.jpg?class=originalMedium",
-        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1NzA2NjM5NzIzMjgxNiIsImgiOiJwd3M2M2gifQ.jpg?class=originalLarge"
+        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1NzA2NjM5NzIzMjgxNiIsImgiOiIxZXg4YWQ1In0.jpg?class=originalSmall",
+        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1NzA2NjM5NzIzMjgxNiIsImgiOiIxZXg4YWQ1In0.jpg?class=originalMedium",
+        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzk1NzA2NjM5NzIzMjgxNiIsImgiOiIxZXg4YWQ1In0.jpg?class=originalLarge"
       }
     },
     {
@@ -64,27 +78,13 @@
       "permalink": "https://www.instagram.com/p/Dd4Akink3_U/",
       "type": "carousel",
       "timestamp": "2026-09-29T14:47:35+0000",
-      "likes": 2197,
+      "likes": 2210,
       "comments": 23,
       "color": "68,49,53",
       "images": {
-        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODA2Mjk5NzkyOTc4NzU1MSIsImgiOiJxejFkc3YifQ.jpg?class=originalSmall",
-        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODA2Mjk5NzkyOTc4NzU1MSIsImgiOiJxejFkc3YifQ.jpg?class=originalMedium",
-        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODA2Mjk5NzkyOTc4NzU1MSIsImgiOiJxejFkc3YifQ.jpg?class=originalLarge"
-      }
-    },
-    {
-      "id": "17894789706437077",
-      "permalink": "https://www.instagram.com/reel/DdtfKwQzTRY/",
-      "type": "reel",
-      "timestamp": "2026-09-25T12:44:03+0000",
-      "likes": 20351,
-      "comments": 677,
-      "color": "164,92,84",
-      "images": {
-        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzg5NDc4OTcwNjQzNzA3NyIsImgiOiJhOTAzd2cifQ.jpg?class=originalSmall",
-        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzg5NDc4OTcwNjQzNzA3NyIsImgiOiJhOTAzd2cifQ.jpg?class=originalMedium",
-        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxNzg5NDc4OTcwNjQzNzA3NyIsImgiOiJhOTAzd2cifQ.jpg?class=originalLarge"
+        "small": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODA2Mjk5NzkyOTc4NzU1MSIsImgiOiIxZ3Y4ZHYxIn0.jpg?class=originalSmall",
+        "medium": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODA2Mjk5NzkyOTc4NzU1MSIsImgiOiIxZ3Y4ZHYxIn0.jpg?class=originalMedium",
+        "large": "https://behold.pictures/eyJ1IjoieTJ1ak9mQ05jMVhXaUpIbEFDelZDMTBGNWpnMiIsImYiOiJVYXE5YVhTYUxRZHRvSzlCa2VQTCIsInAiOiIxODA2Mjk5NzkyOTc4NzU1MSIsImgiOiIxZ3Y4ZHYxIn0.jpg?class=originalLarge"
       }
     }
   ]
